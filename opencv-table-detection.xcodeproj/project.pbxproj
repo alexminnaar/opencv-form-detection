@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7F3FF0601BEA885B00A54722 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F3FF05F1BEA885B00A54722 /* main.cpp */; };
+		7F3FF0671BEAAF1F00A54722 /* counter_finder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7F3FF0661BEAAF1F00A54722 /* counter_finder.cpp */; };
+		7FBD5F631C3ED93700C56D9F /* image_diff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7FBD5F621C3ED93700C56D9F /* image_diff.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		7F3FF05C1BEA885B00A54722 /* opencv-table-detection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "opencv-table-detection"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F3FF05F1BEA885B00A54722 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7F3FF0661BEAAF1F00A54722 /* counter_finder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = counter_finder.cpp; sourceTree = "<group>"; };
+		7FBD5F621C3ED93700C56D9F /* image_diff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = image_diff.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				7F3FF05F1BEA885B00A54722 /* main.cpp */,
+				7F3FF0661BEAAF1F00A54722 /* counter_finder.cpp */,
+				7FBD5F621C3ED93700C56D9F /* image_diff.cpp */,
 			);
 			path = "opencv-table-detection";
 			sourceTree = "<group>";
@@ -118,6 +124,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FBD5F631C3ED93700C56D9F /* image_diff.cpp in Sources */,
+				7F3FF0671BEAAF1F00A54722 /* counter_finder.cpp in Sources */,
 				7F3FF0601BEA885B00A54722 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +213,31 @@
 		7F3FF0641BEA885B00A54722 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +245,31 @@
 		7F3FF0651BEA885B00A54722 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -235,6 +293,7 @@
 				7F3FF0651BEA885B00A54722 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
